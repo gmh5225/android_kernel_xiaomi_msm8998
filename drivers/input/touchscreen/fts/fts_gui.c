@@ -62,7 +62,7 @@ ssize_t fts_i2c_wr_show(struct device *dev, struct device_attribute *attr, char 
 	strlcat(Out_buff, buff,  ARRAY_SIZE(Out_buff));
 
 	for (i = 0; i < (byte_count_read + 2); i++) {
-		if ((i == 0)) {
+		if (i == 0) {
 			char temp_byte_count_read = (byte_count_read >> 8) & 0xFF;
 			snprintf(buff, sizeof(buff), "%02X", temp_byte_count_read);
 		} else if (i == 1) {
@@ -121,7 +121,7 @@ ssize_t fts_i2c_wr_store(struct device *dev, struct device_attribute *attr, cons
 	printk("%s:DATA READ\n{", __func__);
 
 	for (i = 0; i < (2 + byte_count_read); i++) {
-		if ((i == 0)) {
+		if (i == 0) {
 			char temp_byte_count_read = (byte_count_read >> 8) & 0xFF;
 			printk("%02X", (unsigned int)temp_byte_count_read);
 		} else if (i == 1) {
@@ -172,7 +172,7 @@ ssize_t fts_i2c_read_show(struct device *dev, struct device_attribute *attr, cha
 	strlcat(Out_buff, buff, ARRAY_SIZE(Out_buff));
 
 	for (i = 0; i < (byte_count_read + 2); i++) {
-		if ((i == 0)) {
+		if (i == 0) {
 			char temp_byte_count_read = (byte_count_read >> 8) & 0xFF;
 			snprintf(buff, sizeof(buff), "%02X", temp_byte_count_read);
 		} else if (i == 1) {
@@ -238,7 +238,7 @@ ssize_t fts_i2c_read_store(struct device *dev, struct device_attribute *attr, co
 	printk("%s:DATA READ\n{", __func__);
 
 	for (i = 0; i < (byte_count_read + 2); i++) {
-		if ((i == 0)) {
+		if (i == 0) {
 			char temp_byte_count_read = (byte_count_read >> 8) & 0xFF;
 			printk("%02X", (unsigned int)temp_byte_count_read);
 		} else if (i == 1) {

@@ -13,6 +13,7 @@
 
 */
 
+#include <linux/types.h>
 
 #include "ftsSoftware.h"
 

@@ -13,6 +13,7 @@
 
 */
 
+#include <linux/types.h>
 
 #define OK								((int)0x00000000)
 #define ERROR_ALLOC						((int)0x80000001)

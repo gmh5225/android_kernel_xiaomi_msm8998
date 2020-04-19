@@ -13,6 +13,8 @@
 
 */
 
+#include <linux/types.h>
+
 #include "ftsSoftware.h"
 
 #define FLASH_READY				0
